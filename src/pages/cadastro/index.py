@@ -1,12 +1,12 @@
 import flet as ft
 import time
-from src.pages.login.colunas_itens import coluna
+from src.pages.cadastro.colunas_itens import coluna
 
-def Login(page: ft.Page):
+def Cadastro(page: ft.Page):
     container_login = ft.Container(
         width=page.width,
         bgcolor=ft.colors.WHITE,
-        height=page.height * 3 / 4,
+        height=page.height * 4 / 5,
         padding=ft.padding.symmetric(vertical=20, horizontal=15),
         margin=0,
         border_radius=ft.border_radius.only(top_left=50),

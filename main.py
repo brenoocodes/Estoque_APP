@@ -1,5 +1,6 @@
 import flet as ft
 from src.pages.login.index import Login
+from src.pages.cadastro.index import Cadastro
 
 def main(page: ft.Page):
     page.window_resizable = False
@@ -10,11 +11,16 @@ def main(page: ft.Page):
     def route_change(route):
         troute = ft.TemplateRoute(page.route)
         page.views.clear()
-        if troute.match('/'):
+        if troute.match('/') or troute.match('/login'):
             page.views.append(
-                ft.View(route='/', controls=[Login(page=page)], padding=0)
+                ft.View(route='/login', controls=[Login(page=page)], padding=0)
                 )
+        if troute.match('/cadastro'):
+            page.views.append(
+                ft.View(route='/cadastro', controls=[Cadastro(page=page)],padding=0)
+            )
         page.update()
+
     page.update()
     page.on_route_change = route_change
     page.go(page.route)
