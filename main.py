@@ -4,9 +4,9 @@ from src.pages.login.index import Login
 def main(page: ft.Page):
     page.window_resizable = False
     page.window_maximizable = False
-    page.window_width = 450
+    page.window_width = 370
     page.window_height = 750
-    page.window_max_width = 450
+    page.window_max_width = 370
     def route_change(route):
         troute = ft.TemplateRoute(page.route)
         page.views.clear()
@@ -19,4 +19,4 @@ def main(page: ft.Page):
     page.on_route_change = route_change
     page.go(page.route)
 
-ft.app(target=main, port=8550, host="localhost")
+ft.app(target=main, port=8550, host="localhost", assets_dir='assets')
