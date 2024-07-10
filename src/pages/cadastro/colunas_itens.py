@@ -27,8 +27,6 @@ botao = ft.ResponsiveRow(
     ]
 )
 
-
-
 def coluna(page: ft.Page): 
     linha = ft.ResponsiveRow(
     alignment=ft.MainAxisAlignment.CENTER,
